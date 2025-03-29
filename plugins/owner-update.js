@@ -8,7 +8,7 @@ try {
 const stdout = execSync('git pull' + (m.fromMe && text ? ' ' + text : ''));
 let messager = stdout.toString()
 
-if (messager.includes('☘️ Ya estoy actualizada.')) messager = '☘️ Я уже обновлен до последней версии.'
+if (messager.includes('☘️ Я уже в курсе последних событий.')) messager = '☘️ Я уже обновлен до последней версии.'
 
 if (messager.includes('💫 Actualizando.')) messager = '✨️ Обработка, подождите немного, пока я обновлюсь.\n\n' + stdout.toString()
 conn.reply(m.chat, messager, m, rcanal)
